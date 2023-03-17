@@ -1,0 +1,23 @@
+/* ---------------- Cover ---------------- */
+
+#cover {
+  @include flex();
+  min-height: 100vh;
+  position: relative;
+
+  .focus {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .center {
+    @include flex(column, $gap: 2rem);
+    width: 100%;
+
+    img {
+      width: 468px;
+      max-width: 75%;
+    }
+  }
+}

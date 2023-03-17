@@ -1,0 +1,46 @@
+/* ---------------- Who are we? ---------------- */
+
+#about {
+  >img {
+    width: 100%;
+  }
+
+  h1,
+  p {
+    margin: 4rem 12rem;
+
+    @include tablet {
+      margin: 4rem 8rem;
+    }
+
+    @include mobile {
+      margin: 2rem 2rem;
+    }
+  }
+
+  .about-bottom {
+    position: relative;
+
+    .focus {
+      z-index: -1;
+      position: absolute;
+      transform: translateY(-50%);
+      top: 0;
+      left: 0;
+    }
+
+    p {
+      width: 45%;
+
+      @include tablet() {
+        width: 100%;
+        margin: 0;
+        padding: 4rem 8rem;
+      }
+
+      @include mobile() {
+        padding: 2rem;
+      }
+    }
+  }
+}

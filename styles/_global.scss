@@ -1,0 +1,120 @@
+body {
+  background-color: $black;
+  background-image: url('../img/dots.svg');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: $white;
+  box-sizing: border-box;
+}
+
+/* ---------------- Typography ---------------- */
+
+h1 {
+  width: fit-content;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    left: 0;
+    bottom: -1px;
+    background: $brandGradient;
+  }
+}
+
+h2 {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+span {
+  color: $primaryColor;
+}
+
+h6 {
+  background: -webkit-linear-gradient($primaryColor, $secondaryColor);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+p {
+  line-height: 140%;
+}
+
+/* ---------------- Buttons ---------------- */
+
+button {
+  all: unset;
+  @include flex($gap: 0.5rem);
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+
+  &.primary {
+    color: $white;
+    background: $brandGradient;
+  }
+
+  &.secondary {
+    /* color: linear-gradient(97.95deg, $primaryColor -0.24%, $secondaryColor 99.8%); ------> não funciona assim */
+    color: $primaryColor;
+    background: $white;
+  }
+
+  &.text-only {
+    color: $white;
+  }
+}
+
+/* ---------------- Header ---------------- */
+
+header {
+  padding: 2rem 8rem;
+
+  a {
+    font-size: 1.25rem;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* ---------------- Footer ---------------- */
+
+footer {
+  @include flex($justify: flex-end, $gap: 0.5rem);
+  background-image: url('../img/footer.png');
+  background-size: cover;
+  background-position: right;
+  padding: 2rem 8rem;
+
+  @include tablet() {
+    padding: 2rem 4rem;
+  }
+
+  @include tablet() {
+    padding: 2rem;
+  }
+}

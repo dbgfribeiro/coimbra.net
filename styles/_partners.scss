@@ -1,0 +1,64 @@
+#partners {
+  position: relative;
+  overflow: hidden;
+
+  .focus {
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    right: -10rem;
+  }
+
+  .partners-container {
+    padding: 4rem 12rem;
+
+    @include tablet() {
+      padding: 2rem 8rem;
+    }
+
+    @include mobile() {
+      padding: 2rem;
+    }
+
+    &-grid {
+      @include flex($gap: 8rem);
+      flex-wrap: wrap;
+      padding: 8rem 0;
+
+      @include tablet() {
+        padding: 4rem;
+      }
+
+      @include mobile() {
+        @include flex($gap: 3rem);
+        padding: 4rem 2rem;
+      }
+
+      >a {
+        @include flex();
+        width: calc((100% / 4) - 8rem);
+        height: 68px;
+
+        @include tablet() {
+          width: calc((100% / 3) - 4rem);
+          height: 42px;
+        }
+
+        @include mobile() {
+          width: calc((100% / 2) - 2rem);
+          height: 42px;
+        }
+
+        img {
+          width: auto;
+          height: 100%;
+          transition: 0.3s;
+          max-width: 100%;
+          max-height: 100%;
+          height: auto;
+        }
+
+      }
+    }
+  }
+}
