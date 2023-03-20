@@ -1,6 +1,7 @@
 body {
   background-color: $black;
   background-image: url('../img/dots.svg');
+  overflow-x: hidden;
 }
 
 * {
@@ -26,7 +27,7 @@ h1 {
     width: 60px;
     height: 4px;
     left: 0;
-    bottom: -1px;
+    bottom: -2.5px;
     background: $brandGradient;
   }
 }

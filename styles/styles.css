@@ -5,7 +5,7 @@
 }
 #about h1,
 #about p {
-  margin: 4rem 12rem;
+  margin: 0 12rem;
 }
 @media only screen and (max-width: 1024px) {
   #about h1,
@@ -19,6 +19,22 @@
     margin: 2rem 2rem;
   }
 }
+#about p {
+  width: 45%;
+  margin: 2rem 12rem 4rem 12rem;
+}
+@media only screen and (max-width: 1024px) {
+  #about p {
+    width: 100%;
+    margin: 0;
+    padding: 4rem 8rem;
+  }
+}
+@media only screen and (max-width: 640px) {
+  #about p {
+    padding: 2rem;
+  }
+}
 #about .about-bottom {
   position: relative;
 }
@@ -28,21 +44,6 @@
   transform: translateY(-50%);
   top: 0;
   left: 0;
-}
-#about .about-bottom p {
-  width: 45%;
-}
-@media only screen and (max-width: 1024px) {
-  #about .about-bottom p {
-    width: 100%;
-    margin: 0;
-    padding: 4rem 8rem;
-  }
-}
-@media only screen and (max-width: 640px) {
-  #about .about-bottom p {
-    padding: 2rem;
-  }
 }
 
 /* ---------------- Cover ---------------- */
@@ -82,6 +83,13 @@
   width: 65%;
   padding: 2rem 12rem;
   position: relative;
+}
+@media only screen and (min-width: 1600px) {
+  #hello .text-info {
+    max-width: 1600px;
+    margin: 0 auto;
+    transform: translateX(-10%);
+  }
 }
 @media only screen and (max-width: 1024px) {
   #hello .text-info {
@@ -189,11 +197,39 @@
   padding: 2rem 12rem;
   position: relative;
 }
+@media only screen and (min-width: 1600px) {
+  #papers .text-info {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  #papers .text-info {
+    width: 100%;
+    padding: 2rem 4rem;
+  }
+}
+@media only screen and (max-width: 640px) {
+  #papers .text-info {
+    padding: 0 2rem;
+  }
+}
 #papers .text-info > img {
   position: absolute;
   z-index: -1;
   left: 7rem;
   top: -2rem;
+}
+@media only screen and (max-width: 1024px) {
+  #papers .text-info > img {
+    left: 2rem;
+    top: -4rem;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  #papers .text-info > img {
+    left: -2rem;
+  }
 }
 #papers .text-info ul {
   list-style: none;
@@ -208,16 +244,37 @@
 }
 #papers .submit-proposal {
   background: rgba(255, 255, 255, 0.04);
+  border: 2px solid #A661FF;
+  padding: 2rem;
   margin: 2rem 12rem;
   border-radius: 10px;
   overflow: hidden;
+  min-height: 324px;
 }
-#papers .submit-proposal-wrapper {
-  padding: 4rem;
-  border-radius: 10px;
-  border: 4px solid;
-  -o-border-image: linear-gradient(97.95deg, #A661FF -0.24%, #474FFF 99.8%) 1;
-     border-image: linear-gradient(97.95deg, #A661FF -0.24%, #474FFF 99.8%) 1;
+@media only screen and (min-width: 1600px) {
+  #papers .submit-proposal {
+    max-width: 920px;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  #papers .submit-proposal {
+    margin: 2rem 4rem;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  #papers .submit-proposal {
+    margin: 2rem;
+  }
+}
+#papers .submit-proposal .soon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: unset;
+  padding: 5rem 0;
+  opacity: 0.5;
 }
 
 #partners {
@@ -303,7 +360,7 @@
   align-items: flex-end;
   justify-content: center;
   gap: 0.5rem;
-  padding: 16rem 0 12rem 0;
+  padding: 12rem 0 12rem 0;
 }
 @media only screen and (max-width: 1024px) {
   #where-to {
@@ -317,6 +374,12 @@
 @media only screen and (max-width: 640px) {
   #where-to {
     padding: 8rem 0;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  #where-to {
+    max-width: 1600px;
+    margin: 0 auto;
   }
 }
 #where-to .text-info {
@@ -360,6 +423,7 @@
 body {
   background-color: #101010;
   background-image: url("../img/dots.svg");
+  overflow-x: hidden;
 }
 
 * {
@@ -385,7 +449,7 @@ h1::after {
   width: 60px;
   height: 4px;
   left: 0;
-  bottom: -1px;
+  bottom: -2.5px;
   background: linear-gradient(97.95deg, #A661FF -0.24%, #474FFF 99.8%);
 }
 
