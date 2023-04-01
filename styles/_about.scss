@@ -7,7 +7,7 @@
 
   h1,
   p {
-    margin: 0 12rem;
+    margin: 4rem 12rem;
 
     @include tablet {
       margin: 4rem 8rem;
@@ -15,21 +15,6 @@
 
     @include mobile {
       margin: 2rem 2rem;
-    }
-  }
-
-  p {
-    width: 45%;
-    margin: 2rem 12rem 4rem 12rem;
-
-    @include tablet() {
-      width: 100%;
-      margin: 0;
-      padding: 4rem 8rem;
-    }
-
-    @include mobile() {
-      padding: 2rem;
     }
   }
 
@@ -42,6 +27,20 @@
       transform: translateY(-50%);
       top: 0;
       left: 0;
+    }
+
+    p {
+      width: 45%;
+
+      @include tablet() {
+        width: 100%;
+        margin: 0;
+        padding: 4rem 8rem;
+      }
+
+      @include mobile() {
+        padding: 2rem;
+      }
     }
   }
 }
