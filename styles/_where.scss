@@ -1,6 +1,6 @@
 #where-to {
   @include flex(column, $align: flex-end, $gap: 0.5rem);
-  padding: 16rem 0 12rem 0;
+  padding: 12rem 0 12rem 0;
 
   @include tablet() {
     @include flex(column, $align: flex-start, $gap: 0.5rem);
@@ -9,6 +9,12 @@
   @include mobile () {
     padding: 8rem 0;
   }
+
+  @include wide() {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
 
   .text-info {
     @include flex(column, $align: flex-start, $gap: 0.5rem);
