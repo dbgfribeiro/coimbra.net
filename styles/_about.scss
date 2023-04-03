@@ -5,6 +5,18 @@
     width: 100%;
   }
 
+  >div:not(.about-bottom) {
+    @include wide() {
+      max-width: 1600px;
+      margin: 0 auto;
+      transform: translateX(-10%);
+
+      p {
+        width: 75%;
+      }
+    }
+  }
+
   h1,
   p {
     margin: 0 12rem;

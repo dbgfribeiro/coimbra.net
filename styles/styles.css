@@ -3,6 +3,16 @@
 #about > img {
   width: 100%;
 }
+@media only screen and (min-width: 1600px) {
+  #about > div:not(.about-bottom) {
+    max-width: 1600px;
+    margin: 0 auto;
+    transform: translateX(-10%);
+  }
+  #about > div:not(.about-bottom) p {
+    width: 75%;
+  }
+}
 #about h1,
 #about p {
   margin: 0 12rem;
