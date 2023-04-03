@@ -59,7 +59,8 @@ p {
 
 /* ---------------- Buttons ---------------- */
 
-button {
+button,
+#button {
   all: unset;
   @include flex($gap: 0.5rem);
   font-size: 1rem;
@@ -85,6 +86,15 @@ button {
   &.text-only {
     color: $white;
   }
+}
+
+#button {
+  width: fit-content;
+  position: fixed;
+  z-index: 20;
+  top: 2rem;
+  right: 2rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* ---------------- Header ---------------- */
