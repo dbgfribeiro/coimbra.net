@@ -60,7 +60,8 @@ p {
 /* ---------------- Buttons ---------------- */
 
 button,
-#button {
+#button,
+#button-2 {
   all: unset;
   @include flex($gap: 0.5rem);
   font-size: 1rem;
@@ -95,6 +96,10 @@ button,
   top: 2rem;
   right: 2rem;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+#button-2 {
+  align-self: flex-end;
 }
 
 /* ---------------- Header ---------------- */

@@ -490,7 +490,8 @@ p {
 
 /* ---------------- Buttons ---------------- */
 button,
-#button {
+#button,
+#button-2 {
   all: unset;
   display: flex;
   flex-direction: row;
@@ -507,18 +508,21 @@ button,
   cursor: pointer;
 }
 button.primary,
-#button.primary {
+#button.primary,
+#button-2.primary {
   color: #FFFFFF;
   background: linear-gradient(97.95deg, #A661FF -0.24%, #474FFF 99.8%);
 }
 button.secondary,
-#button.secondary {
+#button.secondary,
+#button-2.secondary {
   /* color: linear-gradient(97.95deg, $primaryColor -0.24%, $secondaryColor 99.8%); ------> não funciona assim */
   color: #A661FF;
   background: #FFFFFF;
 }
 button.text-only,
-#button.text-only {
+#button.text-only,
+#button-2.text-only {
   color: #FFFFFF;
 }
 
@@ -530,6 +534,10 @@ button.text-only,
   top: 2rem;
   right: 2rem;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+#button-2 {
+  align-self: flex-end;
 }
 
 /* ---------------- Header ---------------- */
