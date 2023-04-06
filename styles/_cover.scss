@@ -4,6 +4,7 @@
   @include flex();
   min-height: 100vh;
   position: relative;
+  overflow-x: hidden;
 
   .focus {
     position: absolute;

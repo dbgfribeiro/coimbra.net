@@ -48,6 +48,10 @@
   .about-bottom {
     position: relative;
 
+    @include mobile() {
+      overflow-x: hidden;
+    }
+
     .focus {
       z-index: -1;
       position: absolute;
