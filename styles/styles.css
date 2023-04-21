@@ -435,6 +435,9 @@
     width: 80%;
   }
 }
+#where-to .text-info h2 a {
+  color: #A661FF;
+}
 
 body {
   background-color: #101010;
@@ -540,6 +543,16 @@ button.text-only,
   top: 2rem;
   right: 2rem;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+@media only screen and (max-width: 640px) {
+  #button {
+    top: unset;
+    right: unset;
+    left: 50%;
+    width: 80%;
+    transform: translateX(-50%);
+    padding: 1rem;
+  }
 }
 
 #button-2 {
