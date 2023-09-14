@@ -90,6 +90,66 @@
   max-width: 75%;
 }
 
+form {
+  width: 100%;
+  margin-top: 2rem;
+}
+form .form-wrapper {
+  display: flex;
+  gap: 2rem;
+}
+form .form-wrapper .form-col {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+form .form-wrapper .form-col .form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1.5rem;
+  height: 100%;
+}
+form .form-wrapper .form-col .form-field label {
+  font-size: 0.875rem;
+}
+form .form-wrapper .form-col .form-field input,
+form .form-wrapper .form-col .form-field textarea {
+  all: unset;
+  border: 1px solid #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.02);
+  border-radius: 10px;
+  padding: 0.75rem;
+  font-size: 0.875rem;
+  color: #FFFFFF;
+  transition: 0.1s;
+  height: 100%;
+}
+form .form-wrapper .form-col .form-field input::-moz-placeholder, form .form-wrapper .form-col .form-field textarea::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+form .form-wrapper .form-col .form-field input::placeholder,
+form .form-wrapper .form-col .form-field textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+form .form-wrapper .form-col .form-field input:hover,
+form .form-wrapper .form-col .form-field textarea:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+form .form-wrapper .form-col .form-field input:focus,
+form .form-wrapper .form-col .form-field textarea:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  outline: 2px solid #A661FF;
+}
+form .form-wrapper .form-col .form-field input textarea,
+form .form-wrapper .form-col .form-field textarea textarea {
+  height: 100%;
+}
+form .form-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
 #hello .text-info {
   display: flex;
   flex-direction: column;
@@ -143,7 +203,7 @@
   align-items: center;
   justify-content: center;
   gap: unset;
-  padding: 4rem 12rem;
+  padding: 4rem 20rem;
   min-height: 75vh;
   position: relative;
   overflow: hidden;
@@ -161,11 +221,10 @@
 #join-us .card {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: "start";
   justify-content: center;
   gap: 1rem;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 100%;
   padding: 3rem 4rem;
   background: rgba(255, 255, 255, 0.04);
   border-radius: 0.5rem;
