@@ -1,0 +1,85 @@
+#where-to {
+
+  position: relative;
+  padding: 2rem 12rem 12rem 12rem;
+
+  @include flex(column, $align: flex-start, $gap: 1rem);
+  width: 100%;
+  position: relative;
+
+  @include wide() {
+    max-width: 1600px;
+    margin: 0 auto;
+    transform: translateX(-10%);
+  }
+
+  @include tablet() {
+    padding: 2rem 8rem;
+    width: 100%;
+  }
+
+  @include mobile() {
+    padding: 2rem;
+  }
+
+  >img {
+    position: absolute;
+    z-index: -1;
+    left: 7rem;
+    top: -2rem;
+
+    @include tablet() {
+      left: 2rem;
+      top: -4rem;
+    }
+
+    @include tablet() {
+      left: -2rem;
+    }
+  }
+
+  .event-info {
+    img {
+      width: 100%;
+
+      @include tablet() {
+        left: 2rem;
+        top: -4rem;
+      }
+
+      @include tablet() {
+        left: -2rem;
+      }
+
+      @include mobile() {}
+    }
+  }
+
+  .info-text {
+    width: 100%;
+    @include flex(row, $align: flex-start, $justify: space-between);
+
+    .location {
+      a {
+        color: $primaryColor;
+        text-decoration: none;
+        font-family: 'Nunito Sans', sans-serif;
+        font-weight: 300px;
+        font-size: 1.5rem;
+
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .address {
+      @include flex(row, $align: flex-start, $justify: space-between, $gap: 0.5rem);
+
+      >img {
+        width: 0.8rem;
+      }
+    }
+  }
+}
