@@ -36,6 +36,11 @@ h2 {
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
+
+  span {
+    color: $primaryColor;
+    font-weight: 800;
+  }
 }
 
 h3 {
@@ -154,11 +159,33 @@ header {
 /* ---------------- Footer ---------------- */
 
 footer {
-  @include flex($justify: flex-end, $gap: 0.5rem);
+  @include flex($justify: space-between, $gap: 0.5rem);
   background-image: url('../img/footer.png');
   background-size: cover;
   background-position: right;
   padding: 2rem 8rem;
+
+  .footer-social {
+    @include flex($gap: 0.25rem);
+
+    a {
+      img {
+        width: 32px;
+        height: 32px;
+        transition: all 0.2s;
+
+        &:hover {
+          filter: drop-shadow(0px 0px 8px rgba(42, 19, 71, 0.5));
+        }
+
+      }
+    }
+
+  }
+
+  .footer-credits {
+    @include flex($justify: space-between, $gap: 0.5rem);
+  }
 
   @include tablet() {
     padding: 2rem 4rem;

@@ -777,6 +777,10 @@ h2 {
   font-weight: 600;
   font-size: 1.5rem;
 }
+h2 span {
+  color: #A661FF;
+  font-weight: 800;
+}
 
 h3 {
   font-family: "Nunito Sans", sans-serif;
@@ -902,12 +906,34 @@ footer {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   gap: 0.5rem;
   background-image: url("../img/footer.png");
   background-size: cover;
   background-position: right;
   padding: 2rem 8rem;
+}
+footer .footer-social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+footer .footer-social a img {
+  width: 32px;
+  height: 32px;
+  transition: all 0.2s;
+}
+footer .footer-social a img:hover {
+  filter: drop-shadow(0px 0px 8px rgba(42, 19, 71, 0.5));
+}
+footer .footer-credits {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
 }
 @media only screen and (max-width: 1024px) {
   footer {
