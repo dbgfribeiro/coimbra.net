@@ -928,6 +928,12 @@ footer .footer-social a img {
 footer .footer-social a img:hover {
   filter: drop-shadow(0px 0px 8px rgba(42, 19, 71, 0.5));
 }
+@media only screen and (max-width: 640px) {
+  footer .footer-social a img {
+    width: 40px;
+    height: 40px;
+  }
+}
 footer .footer-credits {
   display: flex;
   flex-direction: row;
@@ -940,8 +946,10 @@ footer .footer-credits {
     padding: 2rem 4rem;
   }
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 640px) {
   footer {
+    flex-direction: column;
+    gap: 1.5rem;
     padding: 2rem;
   }
 }/*# sourceMappingURL=styles.css.map */
