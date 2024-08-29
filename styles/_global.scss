@@ -10,6 +10,7 @@ body {
   font-family: 'IBM Plex Sans', sans-serif;
   color: $white;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 /* ---------------- Typography ---------------- */
@@ -121,18 +122,9 @@ button,
 
 #button {
   width: fit-content;
-  position: fixed;
-  z-index: 20;
-  top: 2rem;
-  right: 2rem;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 
   @include mobile() {
-    top: 1rem;
-    right: unset;
-    left: 50%;
-    width: 80%;
-    transform: translateX(-50%);
     padding: 1rem;
   }
 }
@@ -144,14 +136,116 @@ button,
 /* ---------------- Header ---------------- */
 
 header {
-  padding: 2rem 8rem;
 
-  a {
-    font-size: 1.25rem;
-    text-decoration: none;
+  nav {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1.5rem 4rem;
+    z-index: 3;
+    transition: all 0.3s;
 
-    &:hover {
-      text-decoration: underline;
+    @include tablet() {
+      padding: 1.5rem 2rem;
+    }
+
+    @include tablet() {
+      padding: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      li {
+        a {
+          font-size: 1rem;
+          text-decoration: none;
+          text-transform: uppercase;
+
+          &:not(#logo) {
+            opacity: 0.9;
+          }
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      @include mobile() {
+        position: fixed;
+        transform: translateY(-100%);
+        transition: transform 0.4s;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 99;
+        height: 100vh;
+        background: black;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        li a {
+          font-size: 2rem;
+        }
+
+        #button {
+          position: fixed;
+          width: 80%;
+          bottom: 2rem;
+          left: 50%;
+          transform: translate(-50%, 100vh);
+          transition: transform 0.4s;
+        }
+
+        &.showMenu {
+          transform: translateY(0);
+
+          #button {
+            transform: translate(-50%, 0);
+            transition: transform 0.4s;
+          }
+        }
+      }
+    }
+
+    &.active {
+      background: rgba(16, 16, 16, 0.65);
+      backdrop-filter: blur(5px);
+
+      ul a:not(#logo) {
+        opacity: 1;
+      }
+    }
+
+    .hamburger {
+      position: absolute;
+      z-index: 100;
+      padding: 4px;
+      right: 1rem;
+      cursor: pointer;
+      display: none;
+
+      >img {
+        width: 32px;
+      }
+
+      .closeIcon {
+        display: none;
+      }
+
+      @include mobile() {
+        display: block;
+      }
     }
   }
 }
@@ -163,7 +257,7 @@ footer {
   background-image: url('../img/footer.png');
   background-size: cover;
   background-position: right;
-  padding: 2rem 8rem;
+  padding: 2rem 4rem;
 
   .footer-social {
     @include flex($gap: 0.25rem);

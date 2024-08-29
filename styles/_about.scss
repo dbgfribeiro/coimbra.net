@@ -1,6 +1,12 @@
 /* ---------------- Who are we? ---------------- */
 
 #about {
+  margin-top: 8rem;
+
+  @include mobile() {
+    margin-top: 6rem;
+  }
+
   >img {
     width: 100%;
   }
@@ -22,11 +28,11 @@
     margin: 0 12rem;
 
     @include tablet {
-      margin: 4rem 8rem;
+      margin: 0 8rem;
     }
 
     @include mobile {
-      margin: 2rem 2rem;
+      margin: 0 2rem;
     }
   }
 
@@ -37,7 +43,7 @@
     @include tablet() {
       width: 100%;
       margin: 0;
-      padding: 4rem 8rem;
+      padding: 2rem 8rem;
     }
 
     @include mobile() {

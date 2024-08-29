@@ -1,0 +1,191 @@
+#past {
+  padding: 2rem 0;
+
+  @include mobile() {
+    padding: 2rem 0;
+  }
+
+  @include wide() {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  .past-info {
+
+    h1,
+    p,
+    a {
+      margin: 0 12rem;
+
+      @include wide() {
+        margin: 2rem;
+      }
+
+      @include tablet {
+        margin: 2rem 8rem;
+      }
+
+      @include mobile {
+        margin: 2rem 2rem;
+      }
+    }
+
+    p {
+      width: 45%;
+      margin: 2rem 12rem 1rem 12rem;
+
+      @include tablet() {
+        width: 100%;
+        margin: 0;
+        padding: 0 8rem;
+      }
+
+      @include mobile() {
+        padding: 0 2rem;
+      }
+
+      @include wide() {
+        margin-left: 2rem;
+      }
+    }
+
+    a {
+      width: fit-content;
+
+      @include tablet {
+        margin-top: 1rem
+      }
+    }
+  }
+
+  .past-card {
+    @include flex(column, flex-start, flex-start);
+
+    .event-thumb {
+      width: 324px;
+      height: 248px;
+      min-width: 324px;
+      min-height: 248px;
+      object-fit: cover;
+      background-color: $primaryColor;
+      opacity: 0.35;
+    }
+
+    .event-info {
+      position: relative;
+      width: 80%;
+      margin-top: -4rem;
+
+      .quote {
+        position: absolute;
+        transform: translate(-100%, -100%);
+        left: 1.85rem;
+        top: 1.25rem;
+        z-index: 0;
+      }
+
+      h1 {
+        line-height: 120%;
+        z-index: 1;
+
+        &::after {
+          display: none;
+        }
+
+        .highlight {
+          @include gradientText ($brandGradient);
+          width: fit-content;
+          font-family: "Nunito Sans", sans-serif;
+          font-weight: 800;
+          font-size: 2rem;
+          position: relative;
+        }
+      }
+
+      .author-info {
+        margin-top: 0.5rem;
+
+        h4 {
+          @include gradientText ($brandGradient);
+          font-weight: bold;
+
+          &::after {
+            display: none;
+          }
+        }
+
+        p {
+          font-size: 1rem;
+        }
+      }
+
+    }
+  }
+
+  .past-container {
+    @include flex($align: flex-start, $justify: flex-start);
+    position: relative;
+    margin-top: 4rem;
+    gap: 2rem;
+
+    @include mobile() {
+      display: none;
+    }
+
+    .past-card {
+      width: calc(100% / 4);
+
+      @include tablet() {
+        width: calc(100% / 2);
+      }
+
+      &:nth-child(even) {
+        margin-left: 2rem;
+
+        .event-info {
+          align-self: flex-end;
+        }
+      }
+
+      &:nth-child(odd) {
+        margin-top: 6rem;
+        margin-left: 2rem;
+
+        .post-thumb {
+          align-self: flex-end;
+        }
+      }
+    }
+  }
+
+  .past-container-mobile {
+    display: none;
+
+    @include mobile() {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .past-card {
+      width: 100%;
+
+      .event-thumb {
+        width: 100%;
+        max-width: 100%;
+        min-height: 248px;
+      }
+
+      .event-info {
+        padding-left: 2rem;
+
+        .quote {
+          left: 3rem;
+        }
+
+        h1 {
+          font-size: 1.75rem;
+        }
+      }
+    }
+  }
+}

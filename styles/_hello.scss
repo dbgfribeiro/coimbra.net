@@ -3,13 +3,13 @@
   .text-info {
     @include flex(column, $align: flex-start, $gap: 1rem);
     width: 65%;
-
+    margin: 6rem 0 4rem 0;
     padding: 2rem 12rem;
     position: relative;
 
     @include wide() {
       max-width: 1600px;
-      margin: 0 auto;
+      margin: 8rem auto;
       transform: translateX(-10%);
     }
 
@@ -20,6 +20,7 @@
 
     @include mobile() {
       padding: 2rem;
+      margin: 6rem 0 2rem 0;
     }
 
     img {
@@ -36,6 +37,18 @@
       @include tablet() {
         left: -2rem;
       }
+    }
+  }
+
+  .about-banner {
+    width: 100%;
+    max-width: 100%;
+
+    @include mobile() {
+      max-width: 160%;
+      position: relative;
+      transform: translateX(-50%);
+      left: 50%;
     }
   }
 }

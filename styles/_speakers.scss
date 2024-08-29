@@ -1,5 +1,5 @@
 #speakers {
-  padding: 0 12rem 10rem 12rem;
+  padding: 0 12rem 8rem 12rem;
   @include flex(column, $align: flex-start, $gap: 1rem);
 
   @include wide() {
