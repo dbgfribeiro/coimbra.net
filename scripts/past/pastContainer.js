@@ -20,7 +20,7 @@ const pastEvents = [
     quote: "Are you using LINQ like you should?",
     keyWords: ["LINQ"],
     author: "Pedro Sousa",
-    role: "Team Lead @ Valtech",
+    role: "Team Lead @ OutSystems",
     image: "../img/talks/s1ep2t1.png"
   },
   {
