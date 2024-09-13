@@ -25,31 +25,43 @@
     }
 
     .card {
-      @include flex(column, $align: flex-start, $gap: 1rem);
+      @include flex(column, $justify: flex-start, $align: flex-start, $gap: 1rem);
       width: 100%;
-      padding: 2rem;
+      padding: 1.5rem;
       background: rgba(255, 255, 255, 0.04);
       border-radius: 0.5rem;
       border: 1px solid $primaryColor;
 
       @include mobile() {
         @include flex(column, $gap: 2rem);
-        padding: 2rem 1rem;
+        padding: 1.5rem 1rem;
       }
 
       .speaker-info {
+        @include flex($direction: row, $align: start, $justify: flex-start, $gap: 0.5rem);
         position: relative;
         width: 100%;
-        @include flex($direction: row, $align: start, $justify: flex-start, $gap: 0.5rem);
+        height: 100%;
 
       }
 
-      .photo img {
-        width: 12rem;
-        object-fit: cover;
+      .photo {
+        position: relative;
+        display: block;
+        height: 12rem;
+        aspect-ratio: 1/1;
 
-        @include mobile() {
-          display: none;
+        img {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          top: 0;
+          left: 0;
+          object-fit: cover;
+
+          @include mobile() {
+            display: none;
+          }
         }
       }
 
@@ -78,10 +90,14 @@
       }
 
       .personal {
+        @include flex(column, $justify: flex-start, $align: flex-start);
+        height: 100%;
+
         a {
           text-decoration: none;
           cursor: pointer;
           position: relative;
+          margin-top: auto;
 
           &::after {
             content: '';

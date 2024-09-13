@@ -13,7 +13,7 @@ const events = [
             avatar: "img/JoanaCarvalho.png",
             role: "Site Reliability Engineer @ Virtuoso",
             topic: "Observability from the ground up with Otel and .NET",
-            url: "https://www.linkedin.com/in/joana-carvalho-4b7b5a15a/",
+            url: "https://www.linkedin.com/in/jc-performance",
             video: "https://www.youtube.com/embed/iG1It1JkVBQ?si=1mwA1bjl-7SQiUYA"
           },
           {
@@ -21,7 +21,7 @@ const events = [
             avatar: "img/JoaoAntunes.png",
             role: "Software Architect @ Openvia Mobility",
             topic: "OOPs, I did it again",
-            url: "https://www.linkedin.com/in/joaoantunes/",
+            url: "https://www.linkedin.com/in/joaofbantunes",
             video: "https://www.youtube.com/embed/ZBGuKGsVqTQ?si=aYy30QiKa5Hq_kz-"
           }
         ]
@@ -37,7 +37,7 @@ const events = [
             avatar: "img/PedroEmanuelSousa.png",
             role: "Team Lead @ OutSystems",
             topic: "Are you using LINQ as you should?",
-            url: "https://www.linkedin.com/in/pedro-sousa-7a3b5a15a/",
+            url: "https://www.linkedin.com/in/pedroemsousa",
             thumb: "img/pedro_sousa_thumb.png",
           },
           {
@@ -45,7 +45,7 @@ const events = [
             avatar: "img/PedroSousa.png",
             role: "Tech Lead @ Valtech",
             topic: "Unleashing the Cloud Beast: Maximizing Efficiency with VMSS Hosted Agents",
-            url: "https://www.linkedin.com/in/pedro-sousa-7a3b5a15a/",
+            url: "https://www.linkedin.com/in/pmsousa",
             video: "https://www.youtube.com/embed/OA5-Y7Z3jAA?si=WTedhsw_WQ3nGyB4"
           }
         ]
