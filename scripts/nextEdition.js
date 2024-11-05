@@ -1,34 +1,26 @@
 const newEdition = {
-  date: 'October 25th',
-  time: '05:30 PM',
+  date: 'Coming soon',
+  time: '',
   description: {
-    title: 'We are back after a rejuvenating break!',
-    highlight: 'back',
-    text: "Get ready for another insightful event where we'll explore the latest trends, technologies, and best practices in the .NET ecosystem. Whether you're a seasoned developer or just starting your journey, there's something for everyone in our vibrant community."
+    title: 'We just wrapped up our third episode!',
+    highlight: ['third'],
+    text: "Get ready for upcoming events! We're working hard to bring you the best content and speakers. Stay tuned for more information."
   },
   location: {
-    place: 'Instituto Pedro Nunes',
-    link: 'https://www.ipn.pt/',
-    address: 'R. Pedro Nunes Edifício C, Coimbra',
-    image: 'img/map_s2.png'
+    place: '',
+    link: '',
+    address: '',
+    image: ''
   },
   speakers: [
-    {
-      name: 'Sergey Chubarov',
-      role: 'Ethical Hacker',
-      talk: 'AI for Next-Gen Security: OpenAI and Copilot for Security Synergy',
-      talkLink: 'https://sessionize.com/s/schubarov/ai-for-next-gen-security-openai-and-copilot-for-se/93437',
-      linkedin: 'https://www.linkedin.com/in/schubarov',
-      image: 'https://cache.sessionize.com/image/918e-400o400o2-4b-e84f-4024-92c6-32bf91e5cf73.1f82d05d-52d9-476a-9205-084d2a62abdb.jpg'
-    },
-    {
-      name: 'André Melancia',
-      role: 'Human Being (Dev/DBA @Microsoft MCT)',
-      talk: 'Develop for Inclusion using AI: An Azure Story',
-      talkLink: 'https://sessionize.com/s/Andy/develop-for-inclusion-using-ai-an-azure-story/95930',
-      linkedin: 'https://www.linkedin.com/in/andremelancia',
-      image: 'https://cache.sessionize.com/image/d1f9-400o400o2-66-7c67-4961-9c5d-e8706292aaaf.f8c99bf5-1f75-4301-8488-1d66c63ebb60.PNG'
-    }
+    // {
+    //   name: '',
+    //   role: '',
+    //   talk: '',
+    //   talkLink: '',
+    //   linkedin: '',
+    //   image: ''
+    // },
   ]
 }
 
@@ -41,7 +33,7 @@ const description = newEditionContainer.querySelector('#new-description');
 const descriptionTitle = description.querySelector('h2');
 const title = newEdition.description.title.split(' ');
 const highlightedTitle = title.map(word => {
-  if (word === newEdition.description.highlight) {
+  if (newEdition.description.highlight.includes(word.toLowerCase())) {
     return `<span>${word}</span>`;
   }
   return word;
@@ -52,7 +44,7 @@ text.textContent = newEdition.description.text;
 
 /*------------- Location (Where to) -------------*/
 const locationContainer = document.querySelector('#where-to');
-if (newEdition.location) {
+if (newEdition.location.place) {
   const map = locationContainer.querySelector('#location-map');
   map.src = newEdition.location.image;
   const place = locationContainer.querySelector('#location-place');
@@ -71,7 +63,7 @@ if (newEdition.location) {
 const speakersContainer = document.querySelector('#speakers');
 const speakersList = document.querySelector('.speakers-list');
 
-if (newEdition.speakers) {
+if (newEdition.speakers.length) {
   newEdition.speakers.forEach(speaker => {
     const card = `
   <div class="card">

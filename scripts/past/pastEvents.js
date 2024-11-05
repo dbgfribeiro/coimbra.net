@@ -49,6 +49,30 @@ const events = [
             video: "https://www.youtube.com/embed/OA5-Y7Z3jAA?si=WTedhsw_WQ3nGyB4"
           }
         ]
+      },
+      {
+        title: "Episode 3",
+        date: "25-10-2024",
+        location: 'Instituto Pedro Nunes',
+        adress: 'R. Pedro Nunes Edifício C, Coimbra',
+        talks: [
+          {
+            speaker: "Sergey Chubarov",
+            avatar: "https://cache.sessionize.com/image/918e-400o400o2-4b-e84f-4024-92c6-32bf91e5cf73.1f82d05d-52d9-476a-9205-084d2a62abdb.jpg",
+            role: "Ethical Hacker",
+            topic: "AI for Next-Gen Security: OpenAI and Copilot for Security Synergy",
+            url: "https://www.linkedin.com/in/schubarov",
+            thumb: "img/sergey_chubarov_thumb.png",
+          },
+          {
+            speaker: "André Melancia",
+            avatar: "https://cache.sessionize.com/image/d1f9-400o400o2-66-7c67-4961-9c5d-e8706292aaaf.f8c99bf5-1f75-4301-8488-1d66c63ebb60.PNG",
+            role: "Human Being (Dev/DBA @Microsoft MCT)",
+            topic: "Develop for Inclusion using AI: An Azure Story",
+            url: "https://www.linkedin.com/in/andremelancia",
+            thumb: "img/andre_melancia_thumb.png",
+          }
+        ]
       }
     ]
   },
@@ -67,8 +91,8 @@ events.forEach(season => {
             <div class="episode-container-header">
               <div class="episode-title">
                 <span>${episode.date}</span>
-                <h3>${season.title}</h3>
-                <p>${episode.title}</p>
+                <h3>${episode.title}</h3>
+                <p>${season.title}</p>
               </div>
               <div class="episode-location">
                 <span>${episode.location}</span>
