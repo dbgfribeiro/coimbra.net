@@ -1,16 +1,16 @@
 const newEdition = {
-  date: 'Coming soon',
-  time: '',
+  date: 'March 20th',
+  time: '06:00 PM',
   description: {
-    title: 'We just wrapped up our third episode!',
-    highlight: ['third'],
-    text: "Get ready for upcoming events! We're working hard to bring you the best content and speakers. Stay tuned for more information."
+    title: 'We\'re back for an exclusive edition!',
+    highlight: ['back'],
+    text: "Coimbra.NET and Global AI + Power Platform Bootcamps are joining forces to bring an even more exciting event to our community! With events happening in both Coimbra and Lisboa, this partnership will bring even more high-quality content and insights to our community."
   },
   location: {
-    place: '',
-    link: '',
-    address: '',
-    image: ''
+    place: 'Anfiteatro B1 - Departamento de Engenharia Informática',
+    link: 'https://maps.app.goo.gl/QYPM6PnPfD66RCPb9',
+    address: 'Pólo II da Universidade de Coimbra, R. Silvio Lima',
+    image: 'img/map_dei.png'
   },
   speakers: [
     // {

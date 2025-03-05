@@ -485,7 +485,6 @@ form .form-footer {
   #where-to {
     max-width: 1600px;
     margin: 0 auto;
-    transform: translateX(-10%);
   }
 }
 @media only screen and (max-width: 1024px) {
@@ -553,7 +552,7 @@ form .form-footer {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 0.5rem;
 }
 #where-to .info-text .address > img {
@@ -1111,7 +1110,6 @@ form .form-footer {
   #events .events-container {
     max-width: 1600px;
     margin: 0 auto;
-    transform: translateX(-10%);
   }
 }
 @media only screen and (max-width: 1024px) {

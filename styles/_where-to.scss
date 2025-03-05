@@ -10,7 +10,6 @@
   @include wide() {
     max-width: 1600px;
     margin: 0 auto;
-    transform: translateX(-10%);
   }
 
   @include tablet() {
@@ -75,7 +74,7 @@
     }
 
     .address {
-      @include flex(row, $align: center, $justify: space-between, $gap: 0.5rem);
+      @include flex(row, $align: center, $justify: flex-start, $gap: 0.5rem);
 
       >img {
         width: 0.8rem;

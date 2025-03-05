@@ -79,7 +79,6 @@
     @include wide() {
       max-width: 1600px;
       margin: 0 auto;
-      transform: translateX(-10%);
     }
 
     @include tablet() {
